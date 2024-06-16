@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Coffeely
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Coffeely is an e-commerce website created with ReactJS and styled using TailwindCSS. It offers a wide range of coffee and various beverages, providing users with a delightful shopping experience while educating them about coffee culture.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Authentication**: Secure login and registration system.
+- **Product Listings**: Comprehensive catalog of coffee and related beverages.
+- **Product Details**: Detailed pages for each product, including reviews and ratings.
+- **Shopping Cart**: Easy-to-use shopping cart with add, remove, and update quantity features.
+- **Order Management**: View and manage current and past orders.
+- **Interactive UI**: Engaging user interface with smooth animations and parallax effects.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: JavaScript library for building user interfaces.
+- **TailwindCSS**: Utility-first CSS framework for rapid UI development.
+- **AOS (Animate On Scroll)**: Library to animate elements on scroll.
+- **Framer Motion**: Library for creating animations and parallax effects.
+- **React Router**: Declarative routing for React applications.
+- **Font Awesome**: Icons toolkit and fonts library
+- **React Multi Carousel**: Library to create stunning carousels
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/CodewithMiguelll/coffeely.git
+   cd coffeely
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install dependencies**:
+   ```sh
+   npm install
+   ```
 
-### `npm run build`
+3. **Start the development server**:
+   ```sh
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Navigate through the website** to explore different coffee products.
+2. **Create an account** to add items to your shopping cart and make purchases.
+3. **Learn about coffee culture** through our informative blog section.
+4. **Use the order management system** to track your orders and manage your account.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
 
-### `npm run eject`
+- **/src**: Main source code directory.
+  - **/components**: Reusable React components.
+  - **/pages**: Main pages of the application.
+  - **/assets**: Static assets like images
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contributing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contributions are welcome. To contribute:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Fork the repository**.
+2. **Create a new branch** for your feature or bug fix.
+3. **Commit your changes** and push to your forked repository.
+4. **Submit a pull request** detailing your changes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
 
-## Learn More
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For any questions or feedback, please feel free to open an issue or contact me directly at [Instagram](instagram.com/developedby.miguel).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
