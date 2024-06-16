@@ -69,5 +69,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any questions or feedback, please feel free to open an issue or contact me directly at [Instagram](instagram.com/developedby.miguel).
+For any questions or feedback, please feel free to open an issue or contact me directly on:
+- [LinkedIn](www.linkedin.com/in/chikaima-uwakwe)
+- [Instagram](instagram.com/developedby.miguel)
 
