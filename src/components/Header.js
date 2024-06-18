@@ -1,5 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClipboard, faCoffee, faHome, faTimes, faBook, faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
+import BtnPrimary from './BtnPrimary'
+import BtnSecondary from './BtnSecondary'
 import { useState } from "react";
 
 const Header = () => {
@@ -30,12 +32,8 @@ const Header = () => {
             </li>
           </ul>
           <div className="hidden lg:flex items-center gap-5">
-            <button className="border p-2 w-20 rounded-md bg-[#6d4c41] text-[#fafafa] transition-all active:bg-[#4d3128] hover:translate-y-1 active:translate-y-2">
-              Log In
-            </button>
-            <button className="border p-2 w-20 rounded-md bg-[#a1887f] text-[#fafafa] transition-all active:bg-[#7e655c] hover:translate-y-1 active:translate-y-2">
-              Sign Up
-            </button>
+            <BtnPrimary label ="Log In"/>
+            <BtnSecondary label="Sign Up"/>
           </div>
           <button className="lg:hidden" onClick={toggleMenu}>
             {isOpen ? (
@@ -68,12 +66,8 @@ const Header = () => {
                 </li>
               </ul>
               <div className="flex gap-5 mt-5">
-                <button className="border p-2 w-20 rounded-md bg-[#6d4c41] text-[#fafafa] transition-all active:bg-[#4d3128] hover:translate-y-1 active:translate-y-2">
-                  Log In
-                </button>
-                <button className="border p-2 w-20 rounded-md bg-[#a1887f] text-[#fafafa] transition-all active:bg-[#7e655c] hover:translate-y-1 active:translate-y-2">
-                  Sign Up
-                </button>
+                <BtnPrimary label ="Log In"/>
+               <BtnSecondary label="Sign Up"/>
               </div>
             </div>
           )}

@@ -170,6 +170,13 @@ Open Sans uses variants so the classes would need
     font-style: italic;
 }
 
+.open-sans-semi-bold{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
 .open-sans-bold{
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
