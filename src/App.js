@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import AOS from "aos";
 import "aos/dist/aos.css"; 
 
+
 AOS.init();
 
 // You can also pass an optional settings object
