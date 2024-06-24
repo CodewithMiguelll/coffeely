@@ -44,7 +44,7 @@ const Header = () => {
           </button>
 
           {isOpen && (
-            <div className="bg-[#3e2723] text-[#fafafa] flex flex-col lg:hidden absolute top-14 right-1 shadow-xl border rounded-xl w-52 h-[22rem] p-4">
+            <div className="bg-[#3e2723] text-[#fafafa] flex flex-col lg:hidden absolute z-10 top-14 right-1 shadow-xl border rounded-xl w-52 h-[22rem] p-4">
               <ul className="flex flex-col gap-7 items-start p-13">
                 <li>
                   <FontAwesomeIcon icon={faHome} /> <a href="/">Home</a>

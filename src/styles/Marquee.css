@@ -9,7 +9,7 @@
 
 .marquee {
   display: flex;
-  animation: marquee 45s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 
 .marquee-item {
