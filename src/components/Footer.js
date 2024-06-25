@@ -7,9 +7,9 @@ import {
   faClipboardList,
 } from "@fortawesome/free-solid-svg-icons";
 import {
-  faFacebook,
-  faTwitter,
+  faLinkedin,
   faInstagram,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
@@ -50,20 +50,23 @@ const Footer = () => {
         </div>
         <div className="flex gap-4">
           <a
-            href="https://www.facebook.com"
-            className="transition-all text-xl hover:-translate-y-1"
+            href="https://www.linkedin.com/in/chikaima-uwakwe/"
+            target="blank"
+            className="transition-all text-xl hover:-translate-y-1 active:translate-y-1"
           >
-            <FontAwesomeIcon icon={faFacebook} />
+            <FontAwesomeIcon icon={faLinkedin} />
           </a>
           <a
-            href="https://www.twitter.com"
-            className="transition-all text-xl hover:-translate-y-1"
+            href="https://www.github.com/CodeWithMiguelll"
+            target="blank"
+            className="transition-all text-xl hover:-translate-y-1 active:translate-y-1"
           >
-            <FontAwesomeIcon icon={faTwitter} />
+            <FontAwesomeIcon icon={faGithub} />
           </a>
           <a
             href="https://www.instagram.com/developedby.miguel"
-            className="transition-all text-xl hover:-translate-y-1"
+            target="blank"
+            className="transition-all text-xl hover:-translate-y-1 active:translate-y-1"
           >
             <FontAwesomeIcon icon={faInstagram} />
           </a>
