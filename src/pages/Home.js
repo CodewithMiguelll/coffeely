@@ -6,6 +6,7 @@ import BtnPrimary from '../components/BtnPrimary'
 import Marquee from "../components/Marquee";
 import BlogCard from "../components/BlogCard";
 import Footer from '../components/Footer'
+import Header from "../components/Header";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -29,7 +30,8 @@ const responsive = {
 const Main = () => {
   return (
     <div>
-      <main className="">
+      <Header/>
+      <main>
         {/* HERO SECTION */}
         <div
           data-aos="fade-up"

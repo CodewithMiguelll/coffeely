@@ -1,7 +1,11 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Header from './components/Header'
 import Home from './pages/Home'
+import LogIn from "./pages/Login";
+import Signup from "./pages/SignUp";
 import AOS from "aos";
 import "aos/dist/aos.css"; 
+import NotFound from './pages/NotFound';
 
 
 AOS.init();
@@ -29,14 +33,23 @@ AOS.init({
   anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 });
 
+const router = createBrowserRouter ([{
+  path: '/',
+  element: <Home/>,
+  errorElement: <NotFound/>
+},
+
+{
+  path: '/login',
+  element: <LogIn/>
+}
+]);
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       <Header/>
-       <Home/>
-      </header>
-    </div>
+   
+    <RouterProvider router={router} />
+    
   );
 }
 

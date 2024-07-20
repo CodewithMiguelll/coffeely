@@ -12,6 +12,7 @@ import BtnPrimary from "./BtnPrimary";
 import BtnSecondary from "./BtnSecondary";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,20 @@ const Header = () => {
   };
 
   return (
-    <header className="p-4">
+    <header
+      // initial={{
+      //   y: -250,
+      // }}
+      // animate={{
+      //   y: -10,
+      // }}
+      // transition={{
+      //   delay: 0.2,
+      //   type: "spring",
+      //   stiffness:50
+      // }}
+      className="p-4"
+    >
       <nav className="flex justify-between gap-9 items-center">
         <h1 className="text-2xl pacifico-regular">Coffeely</h1>
         <ul className="hidden lg:flex gap-7 items-center p-3 shadow-md border rounded-3xl">
@@ -41,7 +55,12 @@ const Header = () => {
           </li>
         </ul>
         <div className="hidden lg:flex items-center gap-5">
-          <BtnPrimary label="Log In" />
+          <Link to="/login">
+            <button className="border p-2 rounded-md bg-[#6d4c41] text-[#fafafa] transition-all active:bg-[#4d3128] hover:translate-y-1 active:translate-y-2">
+              Log In
+            </button>
+          </Link>
+
           <BtnSecondary label="Sign Up" />
         </div>
         <button className="lg:hidden" onClick={toggleMenu}>
@@ -76,8 +95,18 @@ const Header = () => {
             </li>
           </ul>
           <div className="flex gap-5 mt-5">
-            <BtnPrimary label="Log In" />
-            <BtnSecondary label="Sign Up" />
+            <Link to="/login">
+              <button className="border p-2 rounded-md bg-[#6d4c41] text-[#fafafa] transition-all active:bg-[#4d3128] hover:translate-y-1 active:translate-y-2">
+                Log In
+              </button>
+            </Link>
+
+            <Link to="/signup">
+            <button className="border p-2 rounded-md bg-[#a1887f] text-[#fafafa] transition-all active:bg-[#7e655c] hover:translate-y-1 active:translate-y-2">
+              Sign Up
+            </button>
+            </Link>
+            
           </div>
         </motion.div>
       </nav>
