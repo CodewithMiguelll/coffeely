@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Header from '../components/Header';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons/faArrowAltCircleLeft';
 const NotFound = () => {
@@ -19,7 +19,7 @@ const NotFound = () => {
             </button>
           </Link>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     );
 }

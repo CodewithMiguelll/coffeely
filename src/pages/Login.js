@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import BtnPrimary from '../components/BtnPrimary'
-import BtSecondary from '../components/BtnSecondary'
-import CoverImg from '../assets/images/jakub-dziubak-XtUd5SiX464-unsplash.jpg'
 import BtnSecondary from '../components/BtnSecondary';
+import CoverImg from '../assets/images/jakub-dziubak-XtUd5SiX464-unsplash.jpg'
 
 const LogIn = () => {
     return (
@@ -36,6 +35,8 @@ const LogIn = () => {
                 Welcome Back! Please Enter Your Details
               </p>
             </div>
+
+            {/*FORM ELEMENT FOR USER INPUT */}
             <div className="w-full flex flex-col">
               <input
                 className="w-full border-b bg-transparent text-[#040310] focus:outline-none my-2 border-[#a1887f] py-2 mb-4"
@@ -69,9 +70,15 @@ const LogIn = () => {
               <p className="italic whitespace-nowrap">Forgotten Password?</p>
             </div>
 
+            {/*LOG IN BUTTONS */}
             <div className="w-full flex flex-col">
-              <BtnPrimary label="Log In" />
-              <BtnSecondary label="Sign Up" />
+              <Link to="/">
+                <BtnPrimary label="Log In" />
+              </Link>
+
+              <Link to="/sign-up">
+                <BtnSecondary label="Sign Up" />
+              </Link>
             </div>
 
             <div className="w-full flex items-center justify-center relative py-2 mt-2">
@@ -79,7 +86,6 @@ const LogIn = () => {
               <p className="absolute bg-[#fafafa] text-lg">OR</p>
             </div>
             <div className="w-full text-[#040310] my-2 open-sans-semi-bold bg-[#fafafa] rounded-md p-4 text-center flex items-center justify-center">
-              
               Sign In With Google
             </div>
           </div>
@@ -88,7 +94,7 @@ const LogIn = () => {
               Don't have an account?{" "}
               <Link
                 className="text-[#a1887f] underline underline-offset-2 font-semibold"
-                to="/signup"
+                to="/sign-up"
               >
                 Sign Up Here
               </Link>

@@ -3,6 +3,10 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import LogIn from "./pages/Login";
 import Signup from "./pages/SignUp";
+import Menu from "./pages/Menu";
+import About from "./pages/About";
+import Blogs from "./pages/Blogs";
+import Order from "./pages/OrderPage";
 import AOS from "aos";
 import "aos/dist/aos.css"; 
 import NotFound from './pages/NotFound';
@@ -42,6 +46,31 @@ const router = createBrowserRouter ([{
 {
   path: '/login',
   element: <LogIn/>
+},
+
+{
+  path: '/sign-up',
+  element: <Signup/>
+},
+
+{
+  path: '/menu',
+  element: <Menu/>
+},
+
+{
+  path: '/order',
+  element: <Order/>
+},
+
+{
+  path: '/blogs',
+  element: <Blogs/>
+},
+
+{
+  path: '/about',
+  element: <About/>
 }
 ]);
 

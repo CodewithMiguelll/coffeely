@@ -39,29 +39,29 @@ const Header = () => {
         <h1 className="text-2xl pacifico-regular">Coffeely</h1>
         <ul className="hidden lg:flex gap-7 items-center p-3 shadow-md border rounded-3xl">
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="/">Blogs</a>
+            <Link to="/blogs">Blogs</Link>
           </li>
           <li>
-            <a href="/">Menu</a>
+            <Link to="/menu">Menu</Link>
           </li>
           <li>
-            <a href="/">Get Coffee</a>
+            <Link to="/order">Get Coffee</Link>
           </li>
         </ul>
         <div className="hidden lg:flex items-center gap-5">
           <Link to="/login">
-            <button className="border p-2 rounded-md bg-[#6d4c41] text-[#fafafa] transition-all active:bg-[#4d3128] hover:translate-y-1 active:translate-y-2">
-              Log In
-            </button>
+            <BtnPrimary label="Log In" />
           </Link>
 
-          <BtnSecondary label="Sign Up" />
+          <Link to="/sign-up">
+            <BtnSecondary label="Sign Up" />
+          </Link>
         </div>
         <button className="lg:hidden" onClick={toggleMenu}>
           {isOpen ? (
@@ -79,34 +79,39 @@ const Header = () => {
         >
           <ul className="flex flex-col gap-7 items-start p-3">
             <li>
-              <FontAwesomeIcon icon={faHome} /> <a href="/">Home</a>
+              <Link to="/">
+                <FontAwesomeIcon icon={faHome} /> Home
+              </Link>
             </li>
             <li>
-              <FontAwesomeIcon icon={faQuestionCircle} /> <a href="/">About</a>
+              <Link to="about">
+                <FontAwesomeIcon icon={faQuestionCircle} /> About
+              </Link>
             </li>
             <li>
-              <FontAwesomeIcon icon={faBook} /> <a href="/">Blogs</a>
+              <Link to="/blogs">
+                <FontAwesomeIcon icon={faBook} /> Blogs
+              </Link>
             </li>
             <li>
-              <FontAwesomeIcon icon={faClipboard} /> <a href="/">Menu</a>
+              <Link to="/menu">
+                <FontAwesomeIcon icon={faClipboard} /> Menu
+              </Link>
             </li>
             <li>
-              <FontAwesomeIcon icon={faCoffee} /> <a href="/">Get Coffee</a>
+              <Link to="/order">
+                <FontAwesomeIcon icon={faCoffee} /> Get Coffee
+              </Link>
             </li>
           </ul>
           <div className="flex gap-5 mt-5">
             <Link to="/login">
-              <button className="border p-2 rounded-md bg-[#6d4c41] text-[#fafafa] transition-all active:bg-[#4d3128] hover:translate-y-1 active:translate-y-2">
-                Log In
-              </button>
+              <BtnPrimary label="Log In" />
             </Link>
 
-            <Link to="/signup">
-            <button className="border p-2 rounded-md bg-[#a1887f] text-[#fafafa] transition-all active:bg-[#7e655c] hover:translate-y-1 active:translate-y-2">
-              Sign Up
-            </button>
+            <Link to="/sign-up">
+              <BtnSecondary label="Sign Up" />
             </Link>
-            
           </div>
         </motion.div>
       </nav>
