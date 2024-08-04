@@ -1,7 +1,8 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import HeroImg from "../assets/images/coffeeisolated-removebg-preview.png";
-import AboutImg from "../assets/images/wade-austin-ellis-4YApsoSaNKA-unsplash.jpg";
+import AboutImg from "../assets/images/business-3d-businesswoman-in-blue-suit-with-paper-coffee-cup.png";
+import BlogImg from "../assets/images/wade-austin-ellis-4YApsoSaNKA-unsplash.jpg"
 import BtnPrimary from '../components/BtnPrimary'
 import Marquee from "../components/Marquee";
 import BlogCard from "../components/BlogCard";
@@ -30,7 +31,7 @@ const responsive = {
 const Main = () => {
   return (
     <div>
-      <Header/>
+      <Header />
       <main>
         {/* HERO SECTION */}
         <div
@@ -68,7 +69,7 @@ const Main = () => {
             What Is Coffeely?
           </h2>
 
-          <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mt-6">
+          <div className="flex flex-col md:flex-row items-center justify-center mt-6">
             <div className="max-w-lg mx-20 md:mx-0 md:mr-8 mb-4 md:mb-0">
               <p className="text-base text-[#040310] mt-3 mb-3 text-balance lato-regular">
                 At Coffeely, we source the finest beans from sustainable farms
@@ -80,9 +81,7 @@ const Main = () => {
               <p className="text-base text-[#040310] mt-3 mb-3 text-balance lato-regular">
                 We are committed to sustainability, using eco-friendly packaging
                 and supporting fair trade practices to ensure our coffee makes a
-                positive impact. Whether you’re enjoying a cup at our café or
-                brewing our beans at home, Coffeely offers a unique coffee
-                experience that delights the senses and warms the heart.
+                positive impact.
               </p>
 
               <p className="text-base text-[#040310] mt-3 mb-3 text-balance lato-regular">
@@ -94,10 +93,10 @@ const Main = () => {
                 <span className="font-semibold">
                   Discover the Coffeely experience
                 </span>{" "}
-                <BtnPrimary
-                  label="visit our café or shop online
-            today!"
-                />
+                <span className="text-[#6d4c41] border-b border-[#6d4c41] font-semibold">
+                  {" "}
+                  visit our café or shop online today!
+                </span>
               </p>
             </div>
             <div
@@ -108,8 +107,8 @@ const Main = () => {
             >
               <img
                 src={AboutImg}
-                alt="Barista Making Coffee"
-                className="rounded-lg"
+                alt="Business woman drinking coffee"
+                className="rounded-lg w-72"
               />
             </div>
           </div>
@@ -124,7 +123,7 @@ const Main = () => {
             <div>
               <BlogCard
                 blog={{
-                  image: AboutImg,
+                  image: BlogImg,
                   title: "Blog Title 1",
                   text: "Lorem Ipsum dolor it amet",
                 }}
@@ -134,7 +133,7 @@ const Main = () => {
             <div>
               <BlogCard
                 blog={{
-                  image: AboutImg,
+                  image: BlogImg,
                   title: "Blog Title 2",
                   text: "Lorem Ipsum dolor it amet",
                 }}
@@ -144,7 +143,7 @@ const Main = () => {
             <div>
               <BlogCard
                 blog={{
-                  image: AboutImg,
+                  image: BlogImg,
                   title: "Blog Title 3",
                   text: "Lorem Ipsum dolor it amet",
                 }}
@@ -154,7 +153,7 @@ const Main = () => {
             <div>
               <BlogCard
                 blog={{
-                  image: AboutImg,
+                  image: BlogImg,
                   title: "Blog Title 4",
                   text: "Lorem Ipsum dolor it amet",
                 }}
@@ -164,7 +163,7 @@ const Main = () => {
             <div>
               <BlogCard
                 blog={{
-                  image: AboutImg,
+                  image: BlogImg,
                   title: "Blog Title 5",
                   text: "Lorem Ipsum dolor it amet",
                 }}
@@ -174,7 +173,7 @@ const Main = () => {
             <div>
               <BlogCard
                 blog={{
-                  image: AboutImg,
+                  image: BlogImg,
                   title: "Blog Title 6",
                   text: "Lorem Ipsum dolor it amet",
                 }}
@@ -183,11 +182,11 @@ const Main = () => {
           </Carousel>
         </section>
 
-        {/* FOOTER SECTION*/ }
+        {/* FOOTER SECTION*/}
 
-      <section className="mt-12">
-        <Footer/>
-      </section>
+        <section className="mt-12">
+          <Footer />
+        </section>
       </main>
     </div>
   ); 
