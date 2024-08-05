@@ -100,9 +100,6 @@ const Main = () => {
               </p>
             </div>
             <div
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              data-aos-easing="ease-out"
               className="max-w-md mx-auto"
             >
               <img
