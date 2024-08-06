@@ -10,7 +10,7 @@ import TeamMember3 from "../assets/images/pexels-olly-3769021.jpg";
 import Associate1 from "../assets/images/pexels-rdne-7490974.jpg";
 import Associate2 from "../assets/images/pexels-olly-3799115.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faMailBulk, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import BtnPrimary from "../components/BtnPrimary";
 
 const responsive = {
@@ -120,7 +120,7 @@ const About = () => {
               alt="Team Member 1"
               loading="lazy"
             />
-            <h2 className="text-lg font-semibold">Jane Doe</h2>
+            <h2 className="text-lg font-semibold">Jane Doe</h2> 
             <p>Coffee Roaster</p>
             <p className="mt-2">
               "Bringing out the best flavors from every bean."
