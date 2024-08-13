@@ -11,42 +11,43 @@ import {
   faInstagram,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="bg-[#3e2723] text-[#fafafa] p-6 w-full">
       <div className="flex flex-col items-center">
         <div className="flex gap-6 mb-10">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="transition-all hover:border-b-2 hover:-translate-y-1"
           >
             <FontAwesomeIcon icon={faHome} /> Home
-          </a>
-          <a
-            href="/"
+          </Link>
+          <Link
+            to="/about"
             className="transition-all hover:border-b-2 hover:-translate-y-1"
           >
             <FontAwesomeIcon icon={faQuestionCircle} /> About
-          </a>
-          <a
-            href="/"
+          </Link>
+          <Link
+            to="/blogs"
             className="transition-all hover:border-b-2 hover:-translate-y-1"
           >
             <FontAwesomeIcon icon={faBlog} /> Blog
-          </a>
-          <a
-            href="/"
+          </Link>
+          <Link
+            to="/menu"
             className="transition-all hover:border-b-2 hover:-translate-y-1"
           >
             <FontAwesomeIcon icon={faClipboardList} /> Menu
-          </a>
-          <a
-            href="/"
+          </Link>
+          <Link
+            to="/order"
             className="transition-all hover:border-b-2 hover:-translate-y-1"
           >
             <FontAwesomeIcon icon={faCoffee} /> Order Coffee
-          </a>
+          </Link>
         </div>
         <div className="flex gap-4">
           <a
