@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { TailSpin } from "react-loader-spinner";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+
 
 const MenuPage = () => {
   const [coffees, setCoffees] = useState([]);
@@ -27,7 +30,16 @@ const MenuPage = () => {
   if (loading) return
   <>
     <Header />
-    <p className="text-center mt-4">Loading...</p>;
+    <TailSpin
+      visible={true}
+      height="80"
+      width="80"
+      color="#3e2723"
+      ariaLabel="tail-spin-loading"
+      radius="1"
+      wrapperStyle={{}}
+      wrapperClass=""
+    />
   </>;
  
   if (error) return 
@@ -50,22 +62,22 @@ const MenuPage = () => {
             <h2 className="text-xl font-semibold">Filter by Category</h2>
             <ul className="mt-4">
               <li>
-                <a href="/" className="text-blue-600 hover:underline">
+                <a href="/" className="text-[#040310] hover:underline">
                   Espresso
                 </a>
               </li>
               <li>
-                <a href="/" className="text-blue-600 hover:underline">
+                <a href="/" className="text-[#040310] hover:underline">
                   Single-Origin
                 </a>
               </li>
               <li>
-                <a href="/" className="text-blue-600 hover:underline">
+                <a href="/" className="text-[#040310] hover:underline">
                   Blends
                 </a>
               </li>
               <li>
-                <a href="/" className="text-blue-600 hover:underline">
+                <a href="/" className="text-[#040310] hover:underline">
                   Accessories
                 </a>
               </li>
@@ -95,10 +107,12 @@ const MenuPage = () => {
                   />
                   <h3 className="text-lg font-semibold">{coffee.title}</h3>
                   <p className="mt-2">{coffee.description}</p>
-                  <p className="mt-2 font-bold">${coffee.price}</p>
-                  <button className="mt-4 bg-gray-800 text-white p-2 rounded hover:bg-gray-600">
-                    Add to Cart
-                  </button>
+                  <p className="mt-2 font-bold">$45.55</p>
+                  <Link to="">
+                    <button className="mt-4 bg-[#6d4c41] text-[#fafafa] p-2 rounded  transition-all active:bg-[#4d3128] hover:translate-y-1 active:translate-y-2">
+                      Add to Cart
+                    </button>
+                  </Link>
                 </article>
               ))}
             </section>
