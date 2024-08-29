@@ -8,6 +8,7 @@ import Marquee from "../components/Marquee";
 import BlogCard from "../components/BlogCard";
 import Footer from '../components/Footer'
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -48,7 +49,9 @@ const Main = () => {
               Your Daily Dose of Coffee Inspiration, From Beans to Cup,
               Experience the journey. <br /> Grab a cup of coffee now!
             </p>
-            <BtnPrimary label="Check Out Our Menu!" />
+            <Link to ="/menu">
+              <BtnPrimary label="Check Out Our Menu!" />
+            </Link>
           </div>
           <div>
             <img src={HeroImg} alt="Coffee" className="h-auto" width={400} />
@@ -99,9 +102,7 @@ const Main = () => {
                 </span>
               </p>
             </div>
-            <div
-              className="max-w-md mx-auto"
-            >
+            <div className="max-w-md mx-auto">
               <img
                 src={AboutImg}
                 alt="Business woman drinking coffee"
