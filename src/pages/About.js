@@ -60,7 +60,7 @@ const About = () => {
           <h1 className="text-xl md:text-3xl text-[#fafafa] merriweather-bold mb-4">
             Our Story
           </h1>
-          <p>
+          <p className="lato-regular">
             At Coffeely, our journey began with a simple passion for exceptional
             coffee. Founded by a group of coffee enthusiasts, we set out to
             create a space where quality meets comfort. Our story is rooted in
@@ -76,7 +76,7 @@ const About = () => {
           <h1 className="text-xl md:text-3xl merriweather-bold mb-4">
             Our Mission
           </h1>
-          <p>
+          <p className="lato-regular">
             Our mission at Coffeely is to deliver the finest coffee experience
             to our community. We are committed to quality, sustainability, and
             creating memorable moments through every cup we serve. By focusing
@@ -90,7 +90,7 @@ const About = () => {
           <h1 className="text-xl md:text-3xl merriweather-bold mb-4">
             Our Vision
           </h1>
-          <p>
+          <p className="lato-regular">
             Our vision is to become a beacon of excellence in the coffee
             industry, known for our dedication to quality and sustainability. We
             strive to inspire a global community of coffee lovers by continually
@@ -105,7 +105,7 @@ const About = () => {
         <h1 className="text-xl md:text-3xl merriweather-bold mb-4 text-center">
           Teams and Associates
         </h1>
-        <p className="text-center mb-4">
+        <p className="text-center mb-4 lato-regular">
           Meet the passionate team behind Coffeely.
         </p>
         <Carousel responsive={responsive}>
@@ -120,9 +120,9 @@ const About = () => {
               alt="Team Member 1"
               loading="lazy"
             />
-            <h2 className="text-lg font-semibold">Jane Doe</h2> 
+            <h2 className="text-lg open-sans-semi-bold">Jane Doe</h2>
             <p>Coffee Roaster</p>
-            <p className="mt-2">
+            <p className="mt-2 lato-regular">
               "Bringing out the best flavors from every bean."
             </p>
           </div>
@@ -138,9 +138,9 @@ const About = () => {
               alt="Team Member 2"
               loading="lazy"
             />
-            <h2 className="text-lg font-semibold">John Smith</h2>
+            <h2 className="text-lg open-sans-semi-bold">John Smith</h2>
             <p>Barista</p>
-            <p className="mt-2">
+            <p className="mt-2 lato-regular">
               "Crafting the perfect cup, one pour at a time."
             </p>
           </div>
@@ -156,9 +156,9 @@ const About = () => {
               alt="Team Member 3"
               loading="lazy"
             />
-            <h2 className="text-lg font-semibold">Emily Johnson</h2>
+            <h2 className="text-lg open-sans-semi-bold">Emily Johnson</h2>
             <p>Blog Manager</p>
-            <p className="mt-2">
+            <p className="mt-2 lato-regular">
               "Sharing the latest coffee culture trends and insights with our
               community."
             </p>
@@ -175,9 +175,9 @@ const About = () => {
               alt="Associate 1"
               loading="lazy"
             />
-            <h2 className="text-lg font-semibold">Sarah Lee</h2>
+            <h2 className="text-lg open-sans-semi-bold">Sarah Lee</h2>
             <p>Coffee Bean Importer</p>
-            <p className="mt-2">
+            <p className="mt-2 lato-regular">
               "Providing us with the finest beans from around the world."
             </p>
           </div>
@@ -193,9 +193,9 @@ const About = () => {
               alt="Associate 2"
               loading="lazy"
             />
-            <h2 className="text-lg font-semibold">Michael Brown</h2>
+            <h2 className="text-lg open-sans-semi-bold">Michael Brown</h2>
             <p>Branding Specialist</p>
-            <p className="mt-2">
+            <p className="mt-2 lato-regular">
               "Making Coffeely not just a name, but an experience."
             </p>
           </div>
@@ -207,16 +207,18 @@ const About = () => {
         </h1>
         <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
           <div className="flex-1 p-4 text-[#040310]">
-            <h2 className="text-lg md:text-xl font-semibold mb-2">Call Us</h2>
-            <p>
+            <h2 className="text-lg md:text-xl open-sans-semi-bold mb-2">
+              Call Us
+            </h2>
+            <p className="lato-regular">
               <FontAwesomeIcon icon={faPhone} /> (123) 456-7890
             </p>
-            <p>
+            <p className="lato-regular">
               <FontAwesomeIcon icon={faEnvelope} /> contact@coffeely.com
             </p>
           </div>
           <div className="flex-1 p-4 text-[#040310]">
-            <h2 className="text-lg md:text-xl font-semibold mb-2">
+            <h2 className="text-lg md:text-xl open-sans-semi-bold mb-2">
               Subscribe to Our Blog
             </h2>
             <form className="flex flex-col">
