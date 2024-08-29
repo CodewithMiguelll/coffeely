@@ -21,22 +21,11 @@ const Header = () => {
   };
 
   return (
-    <header
-      // initial={{
-      //   y: -250,
-      // }}
-      // animate={{
-      //   y: -10,
-      // }}
-      // transition={{
-      //   delay: 0.2,
-      //   type: "spring",
-      //   stiffness:50
-      // }}
-      className="p-4"
-    >
+    <header>
       <nav className="flex justify-between gap-9 items-center">
-        <h1 className="text-2xl pacifico-regular">Coffeely</h1>
+        <Link to="/">
+          <h1 className="text-2xl pacifico-regular">Coffeely</h1>
+        </Link>
         <ul className="hidden lg:flex gap-7 items-center p-3 shadow-md border rounded-3xl">
           <li>
             <Link to="/">Home</Link>
