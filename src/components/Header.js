@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <header className="p-4">
       <nav className="flex justify-between gap-9 items-center">
         <Link to="/">
           <h1 className="text-2xl pacifico-regular">Coffeely</h1>
