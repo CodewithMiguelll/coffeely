@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { CartProvider } from 'react-use-cart';
 import Home from './pages/Home'
 import LogIn from "./pages/Login";
 import Signup from "./pages/SignUp";
@@ -145,7 +146,9 @@ const router = createBrowserRouter ([{
 function App() {
   return (
    <>
+    <CartProvider>
     <RouterProvider router={router} />
+    </CartProvider>
    </> 
     
   );
