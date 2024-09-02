@@ -1,14 +1,19 @@
 import { useState, useEffect } from "react";
 import { TailSpin } from "react-loader-spinner";
-import { Link } from "react-router-dom";
+import { useCart } from "react-use-cart";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Modal from "../components/Modal";
 
 
 const MenuPage = () => {
+  const { addItem } = useCart();
   const [coffees, setCoffees] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false)
+
+
 
   useEffect(() => {
     const fetchCoffees = async () => {
@@ -26,6 +31,15 @@ const MenuPage = () => {
 
     fetchCoffees();
   }, []);
+
+   const handleAddToCart = (coffee) => {
+     addItem({ ...coffee, price: 45.55 });
+     setModalOpen(true); // Show the modal
+   };
+
+   const closeModal = () => {
+     setModalOpen(false);
+   };
 
   if (loading) return
   <>
@@ -108,11 +122,12 @@ const MenuPage = () => {
                   <h3 className="text-lg font-semibold">{coffee.title}</h3>
                   <p className="mt-2">{coffee.description}</p>
                   <p className="mt-2 font-bold">$45.55</p>
-                  <Link to="">
-                    <button className="mt-4 bg-[#6d4c41] text-[#fafafa] p-2 rounded  transition-all active:bg-[#4d3128] hover:translate-y-1 active:translate-y-2">
-                      Add to Cart
-                    </button>
-                  </Link>
+                  <button
+                    onClick={() => handleAddToCart(coffee)}
+                    className="mt-4 bg-[#6d4c41] text-[#fafafa] p-2 rounded  transition-all active:bg-[#4d3128] hover:translate-y-1 active:translate-y-2"
+                  >
+                    Add to Cart
+                  </button>
                 </article>
               ))}
             </section>
@@ -120,6 +135,10 @@ const MenuPage = () => {
         </div>
       </div>
       <Footer />
+
+      {modalOpen && (
+        <Modal message="Added to cart" onClose={closeModal} />
+      )}
     </>
   );
 };
