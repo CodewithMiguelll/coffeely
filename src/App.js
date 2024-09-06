@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { CartProvider } from 'react-use-cart';
+import { AuthProvider } from './contexts/authContext';
 import Home from './pages/Home'
 import LogIn from "./pages/Login";
 import Signup from "./pages/SignUp";
@@ -8,6 +9,7 @@ import About from "./pages/About";
 import Blogs from "./pages/Blogs";
 import BlogPost from './pages/BlogPost';
 import Order from "./pages/OrderPage";
+import UserPage from "./pages/UserPage";
 import AOS from "aos";
 import "aos/dist/aos.css"; 
 import NotFound from './pages/NotFound';
@@ -140,17 +142,23 @@ const router = createBrowserRouter ([{
 {
   path: '/about',
   element: <About/>
+},
+
+{
+  path: '/user',
+  element: <UserPage/>
 }
 ]);
 
 function App() {
   return (
-   <>
-    <CartProvider>
-    <RouterProvider router={router} />
-    </CartProvider>
-   </> 
-    
+    <>
+      <AuthProvider>
+        <CartProvider>
+          <RouterProvider router={router} />
+        </CartProvider>
+      </AuthProvider>
+    </>
   );
 }
 
