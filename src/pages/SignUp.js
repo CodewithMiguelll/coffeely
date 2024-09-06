@@ -1,7 +1,9 @@
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom"; 
+import { useState } from "react";
+import { createUserWithEmailAndPassword } from "firebase/auth"; 
+import { auth } from "../firebase/firebase"; 
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +11,8 @@ const SignUp = () => {
     email: "",
     password: "",
   });
+  const [error, setError] = useState(""); // To handle signup errors
+  const navigate = useNavigate(); // To redirect after successful signup
 
   const handleChange = (e) => {
     setFormData({
@@ -17,10 +21,20 @@ const SignUp = () => {
     });
   };
 
-  //TODO: add validation for email
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    setError(""); 
+    try {
+      await createUserWithEmailAndPassword(
+        auth,
+        formData.email,
+        formData.password
+      );
+      
+      navigate("/login");
+    } catch (error) {
+      setError(error.message); // Handle and display any errors that occur during signup
+    }
   };
 
   return (
@@ -38,6 +52,7 @@ const SignUp = () => {
         <h2 className="text-2xl font-bold mb-6 text-center pacifico-regular">
           Sign Up
         </h2>
+        {error && <p className="text-red-500 mb-4">{error}</p>}
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700" htmlFor="name">
