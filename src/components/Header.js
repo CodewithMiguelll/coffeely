@@ -7,18 +7,22 @@ import {
   faTimes,
   faBook,
   faQuestionCircle,
+  faUserCircle
 } from "@fortawesome/free-solid-svg-icons";
 import BtnPrimary from "./BtnPrimary";
 import BtnSecondary from "./BtnSecondary";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useAuth } from "../contexts/authContext"; // Make sure to import useAuth hook
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const { currentUser } = useAuth();
 
   return (
     <header className="p-4">
@@ -43,15 +47,28 @@ const Header = () => {
             <Link to="/order">Get Coffee</Link>
           </li>
         </ul>
-        <div className="hidden lg:flex items-center gap-5">
-          <Link to="/login">
-            <BtnPrimary label="Log In" />
-          </Link>
 
-          <Link to="/sign-up">
-            <BtnSecondary label="Sign Up" />
-          </Link>
+        <div className="hidden lg:flex items-center gap-5">
+          {!currentUser ? (
+            <>
+              <Link to="/login">
+                <BtnPrimary label="Log In" />
+              </Link>
+              <Link to="/sign-up">
+                <BtnSecondary label="Sign Up" />
+              </Link>
+            </>
+          ) : (
+            <Link to="/user">
+              <FontAwesomeIcon
+                icon={faUserCircle}
+                size="2x"
+                className="text-gray-600 hover:text-gray-800"
+              />
+            </Link>
+          )}
         </div>
+
         <button className="lg:hidden" onClick={toggleMenu}>
           {isOpen ? (
             <FontAwesomeIcon icon={faTimes} />
@@ -60,6 +77,7 @@ const Header = () => {
           )}
         </button>
 
+        {/* MOBILE MENU */}
         <motion.div
           initial={{ x: "100%" }}
           animate={{ x: isOpen ? 0 : "100%" }}
@@ -94,13 +112,24 @@ const Header = () => {
             </li>
           </ul>
           <div className="flex gap-5 mt-5">
-            <Link to="/login">
-              <BtnPrimary label="Log In" />
-            </Link>
-
-            <Link to="/sign-up">
-              <BtnSecondary label="Sign Up" />
-            </Link>
+            {!currentUser ? (
+              <>
+                <Link to="/login">
+                  <BtnPrimary label="Log In" />
+                </Link>
+                <Link to="/sign-up">
+                  <BtnSecondary label="Sign Up" />
+                </Link>
+              </>
+            ) : (
+              <Link to="/user">
+                <FontAwesomeIcon
+                  icon={faUserCircle}
+                  size="2x"
+                  className="text-[#fafafa]"
+                />
+              </Link>
+            )}
           </div>
         </motion.div>
       </nav>
