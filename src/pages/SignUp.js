@@ -39,9 +39,10 @@ const SignUp = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#f5f5f5]">
-      <div className="transition-all hover:-translate-x-2 absolute top-5 left-6 p-1">
+      <div className="transition-all hover:-translate-x-2 absolute top-5 left-6 p-2 text-[#fafafa] bg-[#6d4c41] rounded-md">
         <Link to="/">
           <FontAwesomeIcon icon={faArrowLeft} />
+          <p className="inline-block ml-2">Back</p>
         </Link>
       </div>
       <div
