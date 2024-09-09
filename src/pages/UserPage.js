@@ -77,13 +77,13 @@ const UserProfile = () => {
         <div className="mt-4 flex gap-4">
           <button
             onClick={handleSignOut}
-            className="px-4 py-2 transition-all hover:translate-y-2 bg-red-500 text-[#fafafa] rounded-md hover:bg-red-600"
+            className="px-4 py-2 transition-all bg-red-500 text-[#fafafa] rounded-md hover:bg-red-600 active:bg-red-700"
           >
             <FontAwesomeIcon icon={faDoorOpen} className="mr-2" />
             Sign Out
           </button>
           <Link to="/order">
-            <button className="px-4 py-2 bg-[#a1887f] transition-all text-[#fafafa] rounded-md hover:bg-[#7e655c] hover:translate-y-2">
+            <button className="px-4 py-2 bg-[#a1887f] transition-all text-[#fafafa] rounded-md hover:bg-[#7e655c]">
               <FontAwesomeIcon icon={faCartArrowDown} className="mr-2" />
               View Orders
             </button>
