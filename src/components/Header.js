@@ -7,12 +7,11 @@ import {
   faTimes,
   faBook,
   faQuestionCircle,
-  faUserCircle
+  faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import BtnPrimary from "./BtnPrimary";
 import BtnSecondary from "./BtnSecondary";
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/authContext"; // Make sure to import useAuth hook
 
@@ -78,60 +77,59 @@ const Header = () => {
         </button>
 
         {/* MOBILE MENU */}
-        <motion.div
-          initial={{ x: "100%" }}
-          animate={{ x: isOpen ? 0 : "100%" }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className={`bg-[#3e2723] text-[#fafafa] flex flex-col lg:hidden absolute z-10 top-14 right-0 shadow-xl border rounded-xl w-52 h-[22rem] p-4`}
-        >
-          <ul className="flex flex-col gap-7 items-start p-3">
-            <li>
-              <Link to="/">
-                <FontAwesomeIcon icon={faHome} /> Home
-              </Link>
-            </li>
-            <li>
-              <Link to="about">
-                <FontAwesomeIcon icon={faQuestionCircle} /> About
-              </Link>
-            </li>
-            <li>
-              <Link to="/blogs">
-                <FontAwesomeIcon icon={faBook} /> Blogs
-              </Link>
-            </li>
-            <li>
-              <Link to="/menu">
-                <FontAwesomeIcon icon={faClipboard} /> Menu
-              </Link>
-            </li>
-            <li>
-              <Link to="/order">
-                <FontAwesomeIcon icon={faCoffee} /> Get Coffee
-              </Link>
-            </li>
-          </ul>
-          <div className="flex gap-5 mt-5">
-            {!currentUser ? (
-              <>
-                <Link to="/login">
-                  <BtnPrimary label="Log In" />
+        {isOpen && (
+          <div
+            className={`bg-[#3e2723] text-[#fafafa] flex flex-col lg:hidden absolute z-10 top-14 right-0 shadow-xl border rounded-xl w-52 h-[22rem] p-4`}
+          >
+            <ul className="flex flex-col gap-7 items-start p-3">
+              <li>
+                <Link to="/">
+                  <FontAwesomeIcon icon={faHome} /> Home
                 </Link>
-                <Link to="/sign-up">
-                  <BtnSecondary label="Sign Up" />
+              </li>
+              <li>
+                <Link to="about">
+                  <FontAwesomeIcon icon={faQuestionCircle} /> About
                 </Link>
-              </>
-            ) : (
-              <Link to="/user">
-                <FontAwesomeIcon
-                  icon={faUserCircle}
-                  size="2x"
-                  className="text-[#fafafa]"
-                />
-              </Link>
-            )}
+              </li>
+              <li>
+                <Link to="/blogs">
+                  <FontAwesomeIcon icon={faBook} /> Blogs
+                </Link>
+              </li>
+              <li>
+                <Link to="/menu">
+                  <FontAwesomeIcon icon={faClipboard} /> Menu
+                </Link>
+              </li>
+              <li>
+                <Link to="/order">
+                  <FontAwesomeIcon icon={faCoffee} /> Get Coffee
+                </Link>
+              </li>
+            </ul>
+            <div className="flex gap-5 mt-5">
+              {!currentUser ? (
+                <>
+                  <Link to="/login">
+                    <BtnPrimary label="Log In" />
+                  </Link>
+                  <Link to="/sign-up">
+                    <BtnSecondary label="Sign Up" />
+                  </Link>
+                </>
+              ) : (
+                <Link to="/user">
+                  <FontAwesomeIcon
+                    icon={faUserCircle}
+                    size="2x"
+                    className="text-[#fafafa]"
+                  />
+                </Link>
+              )}
+            </div>
           </div>
-        </motion.div>
+        )}
       </nav>
     </header>
   );
