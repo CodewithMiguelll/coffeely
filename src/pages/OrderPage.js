@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 
@@ -25,6 +26,9 @@ const OrderPage = () => {
           className="text-red-500 text-6xl mb-4"
         />
         <h1 className="text-xl font-semibold">Your cart is empty</h1>
+        <Link to="/menu">
+          <button className="border border-gray-500 md:hover:border-0 p-2 mt-3 rounded-lg transition-all md:hover:translate-y-1 md:hover:bg-[#6d4c41] md:hover:text-[#fafafa] active:bg-[#4d3128] active:text-[#fafafa]">Order now</button>
+        </Link>
       </div>
 
       <Footer />
