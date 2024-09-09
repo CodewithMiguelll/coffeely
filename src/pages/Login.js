@@ -35,10 +35,13 @@ const LogIn = () => {
 
   return (
     <>
-      {userLoggedIn && <Navigate to="/" replace={true} />}
+      {userLoggedIn && <Navigate to="/menu" replace={true} />}
       <div className="w-full h-screen flex items-center justify-center bg-[#fafafa]">
         {/* Log In Form */}
-        <div className="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg">
+        <div
+        data-aos="fade-up"
+        data-aos-duration="1400"
+        className="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg">
           <h1 className="text-xl text-[#040310] pacifico-regular mb-2">
             Coffeely
           </h1>
