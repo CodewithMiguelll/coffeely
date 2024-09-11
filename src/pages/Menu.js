@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
 import { TailSpin } from "react-loader-spinner";
 import { useCart } from "react-use-cart";
+import { useAuth } from "../contexts/authContext"; // Adjust path based on where your auth context is
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Modal from "../components/Modal";
 
-
 const MenuPage = () => {
   const { addItem } = useCart();
+  const { userLoggedIn } = useAuth(); // Fetch logged-in state from your auth context
   const [coffees, setCoffees] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [modalOpen, setModalOpen] = useState(false)
-
-
+  const [modalOpen, setModalOpen] = useState(false);
+  const [loginPrompt, setLoginPrompt] = useState(false); // State to manage login prompt modal
 
   useEffect(() => {
     const fetchCoffees = async () => {
@@ -32,35 +32,47 @@ const MenuPage = () => {
     fetchCoffees();
   }, []);
 
-   const handleAddToCart = (coffee) => {
-     addItem({ ...coffee, price: 45.55 });
-     setModalOpen(true); // Show the modal
-   };
+  const handleAddToCart = (coffee) => {
+    if (!userLoggedIn) {
+      setLoginPrompt(true); // Show login prompt if the user isn't logged in
+      return;
+    }
+    addItem({ ...coffee, price: 45.55 });
+    setModalOpen(true);
+  };
 
-   const closeModal = () => {
-     setModalOpen(false);
-   };
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
-  if (loading) return
-  <>
-    <Header />
-    <TailSpin
-      visible={true}
-      height="80"
-      width="80"
-      color="#3e2723"
-      ariaLabel="tail-spin-loading"
-      radius="1"
-      wrapperStyle={{}}
-      wrapperClass=""
-    />
-  </>;
- 
-  if (error) return 
-  <>
-    <Header />
-    <p className="text-center mt-4">{error}</p>;
-  </>;
+  const closeLoginPrompt = () => {
+    setLoginPrompt(false);
+  };
+
+  if (loading)
+    return (
+      <>
+        <Header />
+        <TailSpin
+          visible={true}
+          height="80"
+          width="80"
+          color="#3e2723"
+          ariaLabel="tail-spin-loading"
+          radius="1"
+          wrapperStyle={{}}
+          wrapperClass=""
+        />
+      </>
+    );
+
+  if (error)
+    return (
+      <>
+        <Header />
+        <p className="text-center mt-4">{error}</p>;
+      </>
+    );
 
   return (
     <>
@@ -136,8 +148,13 @@ const MenuPage = () => {
       </div>
       <Footer />
 
-      {modalOpen && (
-        <Modal message="Added to cart" onClose={closeModal} />
+      {modalOpen && <Modal message="Added to cart" onClose={closeModal} />}
+
+      {loginPrompt && (
+        <Modal
+          message="Please log in to add items to the cart"
+          onClose={closeLoginPrompt}
+        />
       )}
     </>
   );
