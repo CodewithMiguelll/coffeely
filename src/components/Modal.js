@@ -1,4 +1,4 @@
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import {  faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Modal = ({ message, onClose }) => {
@@ -7,7 +7,7 @@ const Modal = ({ message, onClose }) => {
       <div className="bg-white px-20 py-10 rounded shadow-lg text-center">
         <FontAwesomeIcon
           className="text-6xl text-[#6d4c41]"
-          icon={faCheckCircle}
+          icon={faExclamationCircle}
         />
         <p className="mt-6 lato-regular">{message}</p>
         <button
