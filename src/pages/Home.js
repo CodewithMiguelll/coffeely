@@ -73,7 +73,7 @@ const Main = () => {
           </h2>
 
           <div className="flex flex-col md:flex-row items-center justify-center mt-6">
-            <div className="max-w-lg mx-20 md:mx-0 md:mr-8 mb-4 md:mb-0">
+            <div className="max-w-lg mx-2 md:mx-0 md:mr-8 mb-4 md:mb-0">
               <p className="text-base text-[#040310] mt-3 mb-3 text-balance lato-regular">
                 At Coffeely, we source the finest beans from sustainable farms
                 around the world, ensuring every cup is rich, flavorful, and
