@@ -205,8 +205,8 @@ const About = () => {
         <h1 className="text-xl md:text-3xl merriweather-bold mb-4 text-center">
           Contact Us
         </h1>
-        <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
-          <div className="flex-1 p-4 text-[#040310]">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-start justify-center">
+          <div className="w-full md:w-1/2 p-4 text-[#040310]">
             <h2 className="text-lg md:text-xl open-sans-semi-bold mb-2">
               Call Us
             </h2>
@@ -217,15 +217,15 @@ const About = () => {
               <FontAwesomeIcon icon={faEnvelope} /> contact@coffeely.com
             </p>
           </div>
-          <div className="flex-1 p-4 text-[#040310]">
-            <h2 className="text-lg md:text-xl open-sans-semi-bold mb-2">
+          <div className="w-full md:w-1/2 p-4 text-[#040310]">
+            <h2 className="text-lg md:text-xl open-sans-semi-bold mb-2 text-center">
               Subscribe to Our Blog
             </h2>
-            <form className="flex flex-col">
+            <form className="flex flex-col max-w-xs mx-auto w-full">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="p-2 mb-4 rounded border border-gray-300"
+                className="p-2 mb-4 rounded border border-gray-300 w-full"
                 required
               />
               <BtnPrimary label={"Subscribe"} />
