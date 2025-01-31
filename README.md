@@ -71,5 +71,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any questions or feedback, please feel free to open an issue or contact me directly on:
 - [LinkedIn](https://linkedin.com/in/chikaima-uwakwe)
-- [Instagram](https://instagram.com/developedby.miguel)
+- [Instagram](https://instagram.com/frames.of.miguelll)
 
