@@ -65,7 +65,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faGithub} />
           </a>
           <a
-            href="https://www.instagram.com/developedby.miguel"
+            href="https://www.instagram.com/frames.of.miguell"
             target="blank"
             className="transition-all text-xl hover:-translate-y-1 active:translate-y-1"
           >
