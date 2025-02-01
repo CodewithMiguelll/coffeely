@@ -18,7 +18,7 @@ const MenuPage = () => {
   useEffect(() => {
     const fetchCoffees = async () => {
       try {
-        const response = await fetch("https://api.sampleapis.com/coffee/hot");
+        const response = await fetch("https://fake-coffee-api.vercel.app/api");
         if (!response.ok) throw new Error("Network response was not ok");
         const data = await response.json();
         setCoffees(data);
